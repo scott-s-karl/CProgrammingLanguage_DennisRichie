@@ -62,18 +62,12 @@ int getLine(char **s, int lim){
         // Check
         for (j = i; j > 0; j--) {
                 /* code */
-                if((*s)[j] != '\0'){
+                if((*s)[j] >= 33 && (*s)[j] <= 126){
                         (*s)[j+1] = '\n';
                         (*s)[j+2] = '\0';
                         break;
                 }
         }
-
-
-        // Return the length of the char array
-        printf("5th is: %c\n",(*s)[5]);
-        printf("6th is: %c\n",(*s)[6]);
-        printf("7th is: %c\n",(*s)[7]);
         ++j;
         return(j);
 }
